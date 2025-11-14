@@ -1,4 +1,4 @@
-# 🎰 Vietlott Data
+# 🎰 Vietlott Power 6/55 Data & Prediction
 
 [![GitHub Actions](https://github.com/vietvudanh/vietlott-data/workflows/crawl/badge.svg)](https://github.com/vietvudanh/vietlott-data/actions)
 [![Python](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
@@ -6,52 +6,34 @@
 [![Data Updated](https://img.shields.io/badge/data-daily%20updated-brightgreen.svg)](https://github.com/vietvudanh/vietlott-data/commits/main)
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Deployed-blue)](https://vietvudanh.github.io/vietlott-data/)
 
-> 📊 **Automated Vietnamese Lottery Data Collection & Analysis**
+> 📊 **Automated Power 6/55 Lottery Data Collection & Analysis**
 > 
-> This project automatically crawls and analyzes Vietnamese lottery data from [vietlott.vn](https://vietlott.vn/), providing comprehensive statistics and insights for all major lottery products.
+> This project focuses specifically on Power 6/55 lottery data from [vietlott.vn](https://vietlott.vn/), providing comprehensive statistics, analysis, and prediction models for the Power 6/55 game.
 
-## 🎯 Supported Lottery Products
+## 🎯 Focus: Power 6/55 Lottery
 
 | Product | Link | Description |
 |---------|------|-------------|
 | **Power 6/55** | [🔗 Results](https://vietlott.vn/vi/trung-thuong/ket-qua-trung-thuong/655) | Choose 6 numbers from 1-55 |
-| **Power 6/45** | [🔗 Results](https://vietlott.vn/vi/trung-thuong/ket-qua-trung-thuong/645) | Choose 6 numbers from 1-45 |
-| **Power 5/35** | [🔗 Results](https://vietlott.vn/vi/trung-thuong/ket-qua-trung-thuong/535) | Choose 5 numbers from 1-35 |
-| **Keno** | [🔗 Results](https://vietlott.vn/vi/trung-thuong/ket-qua-trung-thuong/winning-number-keno) | Fast-pace number game |
-| **Max 3D** | [🔗 Results](https://vietlott.vn/vi/trung-thuong/ket-qua-trung-thuong/max-3d) | 3-digit lottery game |
-| **Max 3D Pro** | [🔗 Results](https://vietlott.vn/vi/trung-thuong/ket-qua-trung-thuong/max-3dpro) | Enhanced 3D lottery |
-| **Bingo18** | [🔗 Results](https://vietlott.vn/vi/trung-thuong/ket-qua-trung-thuong/winning-number-bingo18) | 3 numbers from 0-9 game |
-
 
 ## 📋 Table of Contents
 
-- [🎯 Supported Lottery Products](#-supported-lottery-products)
+- [🎯 Focus: Power 6/55 Lottery](#-focus-power-655-lottery)
 - [📊 Data Statistics](#-data-statistics)
 - [🔮 Prediction Models](#-prediction-models)
 - [📈 Power 6/55 Analysis](#-power-655-analysis)
   - [📅 Recent Results](#-recent-results)
   - [🎲 Number Frequency (All Time)](#-number-frequency-all-time)
   - [📊 Frequency Analysis by Period](#-frequency-analysis-by-period)
-- [📈 Power 5/35 Analysis](#-power-535-analysis)
-  - [📅 Recent Results](#-recent-results-1)
-  - [🎲 Number Frequency (All Time)](#-number-frequency-all-time-1)
-  - [📊 Frequency Analysis by Period](#-frequency-analysis-by-period-1)
 - [⚙️ How It Works](#️-how-it-works)
 - [🚀 Installation & Usage](#-installation--usage)
 - [📄 License](#-license)
-
 
 ## 📊 Data Statistics
 
 | Product   |   Total Draws | Start Date   | End Date   |   Total Records | First ID   | Latest ID   |
 |:----------|--------------:|:-------------|:-----------|----------------:|:-----------|:------------|
 | Power 655 |          1262 | 2017-08-01   | 2025-10-30 |            1262 | 00001      | 01262       |
-| Power 645 |          1228 | 2017-10-25   | 2025-10-29 |            1228 | 00198      | 01425       |
-| Power 535 |           100 | 2025-06-29   | 2025-10-30 |             200 | 00001      | 00248       |
-| Keno      |           356 | 2022-12-04   | 2025-10-30 |           46493 | #0110271   | #0257778    |
-| 3D        |           992 | 2019-04-22   | 2025-10-29 |             992 | 00001      | 00996       |
-| 3D Pro    |           639 | 2021-09-14   | 2025-10-30 |             639 | 00001      | 00643       |
-| Bingo18   |           332 | 2024-12-03   | 2025-10-30 |           51544 | 0083123    | 0135809     |
 
 ## 🔮 Prediction Models
 
@@ -235,9 +217,14 @@ vietlott-missing [OPTIONS] PRODUCT
 # Options:
 #   --limit INTEGER  Number of pages to process (default: 20)
 #   --help          Show help message
+# Crawl Power 6/55 data
+python -m vietlott.cli.crawl power_655
+
+# Analyze data and generate predictions
+python main.py
 ```
 
-> **Available Products**: power_655, power_645, power_535, keno, 3d, 3d_pro, bingo18
+> **Available Product**: power_655
 
 ### 🛠️ Development Setup
 

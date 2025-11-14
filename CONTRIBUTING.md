@@ -1,5 +1,15 @@
+# Contributing to Vietlott Power 6/55 Project
+
+This project focuses specifically on Power 6/55 lottery data collection and prediction.
+
 # Dev environment
 You can check [Makefile]() to see the basic flow to dev at local
+
+## Focus Areas
+- Power 6/55 data collection and crawling
+- Prediction model development for Power 6/55
+- Statistical analysis and visualization
+- Performance optimization for prediction algorithms
 
 # Release Process
 
